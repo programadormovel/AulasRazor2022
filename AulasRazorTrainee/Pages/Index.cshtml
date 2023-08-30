@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <!-- Bloco unitário -->
+    @{
+        var Nome = "Adriano Domingues";
+    }
+    @{
+        var Idade = 46;
+    }
+
+    <!-- Incorporado -->
+    <p> O nome do usuário é: @Nome </p>
+    <p> A idade do usuário é: @Idade </p>
+
+    <!-- Multi linhas -->
+    @{
+        var Modelo = "IX35";
+        var Tipo = "SUV";
+        var Fabricante = "Hyundai";
+        var Mensagem = "O modelo é: " + Modelo + $". Este carro é do tipo {Tipo} e é fabricado por {Fabricante}. ";
+    }
+    <h1>Informações do carro do cliente "@Nome"</h1>
+    <p>@Mensagem</p>
+
+    @* Este é um exemplo de comentário em Razor *@
+    @{
+        var dia = DateTime.Now.Day;
+    }
+    <p>Hoje é: @dia</p>
+</div>
